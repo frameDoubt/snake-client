@@ -21,6 +21,9 @@ const setupInput = function(conn) {
     if (usersInput === '\u0064') {
       connection.write('Move: right');
     }
+    if (usersInput === '\u0065') {
+      connection.write('Say: win');
+    }
   };
   stdin.on('data',(key) => {
     handleUserInput(key);
