@@ -1,9 +1,9 @@
 
-const connect = require('./client');
-const setupInput = require('./input');
+const { connect }= require('./client');
+const { setupInput } = require('./input');
 
 console.log('Connecting...');
-connect();
+
 
 // const setupInput = function() {
 //   const stdin = process.stdin;
@@ -20,4 +20,6 @@ connect();
 //   });
 //   return stdin;
 // };
-setupInput();
+setupInput(connect());
+
+// module.exports = connect;
